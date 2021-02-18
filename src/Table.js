@@ -68,7 +68,7 @@ const Table = ({ markup }) => {
         [textTable],
         { type: "text/html" }
       ),
-      "text/plain": "ya sosal menya ebali"
+      "text/plain": "Paste it to google sheets or exel"
     });
     clipboard.write([item]);
   };
