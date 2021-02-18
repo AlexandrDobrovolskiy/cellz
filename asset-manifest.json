@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/storypointz/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/storypointz/static/js/main.34fd0835.chunk.js",
-    "main.js.map": "/storypointz/static/js/main.34fd0835.chunk.js.map",
-    "runtime-main.js": "/storypointz/static/js/runtime-main.70580c4e.js",
-    "runtime-main.js.map": "/storypointz/static/js/runtime-main.70580c4e.js.map",
-    "static/js/2.5c5c6ac4.chunk.js": "/storypointz/static/js/2.5c5c6ac4.chunk.js",
-    "static/js/2.5c5c6ac4.chunk.js.map": "/storypointz/static/js/2.5c5c6ac4.chunk.js.map",
-    "static/js/3.8519f43f.chunk.js": "/storypointz/static/js/3.8519f43f.chunk.js",
-    "static/js/3.8519f43f.chunk.js.map": "/storypointz/static/js/3.8519f43f.chunk.js.map",
-    "index.html": "/storypointz/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/storypointz/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.5c5c6ac4.chunk.js.LICENSE.txt": "/storypointz/static/js/2.5c5c6ac4.chunk.js.LICENSE.txt",
-    "static/media/copy.ba2786b3.svg": "/storypointz/static/media/copy.ba2786b3.svg",
-    "static/media/plus.0693ab3c.svg": "/storypointz/static/media/plus.0693ab3c.svg"
+    "main.css": "/cellz/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/cellz/static/js/main.34fd0835.chunk.js",
+    "main.js.map": "/cellz/static/js/main.34fd0835.chunk.js.map",
+    "runtime-main.js": "/cellz/static/js/runtime-main.e576cf40.js",
+    "runtime-main.js.map": "/cellz/static/js/runtime-main.e576cf40.js.map",
+    "static/js/2.b0629a15.chunk.js": "/cellz/static/js/2.b0629a15.chunk.js",
+    "static/js/2.b0629a15.chunk.js.map": "/cellz/static/js/2.b0629a15.chunk.js.map",
+    "static/js/3.8519f43f.chunk.js": "/cellz/static/js/3.8519f43f.chunk.js",
+    "static/js/3.8519f43f.chunk.js.map": "/cellz/static/js/3.8519f43f.chunk.js.map",
+    "index.html": "/cellz/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/cellz/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.b0629a15.chunk.js.LICENSE.txt": "/cellz/static/js/2.b0629a15.chunk.js.LICENSE.txt",
+    "static/media/copy.ba2786b3.svg": "/cellz/static/media/copy.ba2786b3.svg",
+    "static/media/plus.0693ab3c.svg": "/cellz/static/media/plus.0693ab3c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.70580c4e.js",
-    "static/js/2.5c5c6ac4.chunk.js",
+    "static/js/runtime-main.e576cf40.js",
+    "static/js/2.b0629a15.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
     "static/js/main.34fd0835.chunk.js"
   ]
