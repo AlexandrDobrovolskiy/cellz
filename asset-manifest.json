@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/storypointz/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/storypointz/static/js/main.34fd0835.chunk.js",
+    "main.js.map": "/storypointz/static/js/main.34fd0835.chunk.js.map",
+    "runtime-main.js": "/storypointz/static/js/runtime-main.70580c4e.js",
+    "runtime-main.js.map": "/storypointz/static/js/runtime-main.70580c4e.js.map",
+    "static/js/2.5c5c6ac4.chunk.js": "/storypointz/static/js/2.5c5c6ac4.chunk.js",
+    "static/js/2.5c5c6ac4.chunk.js.map": "/storypointz/static/js/2.5c5c6ac4.chunk.js.map",
+    "static/js/3.8519f43f.chunk.js": "/storypointz/static/js/3.8519f43f.chunk.js",
+    "static/js/3.8519f43f.chunk.js.map": "/storypointz/static/js/3.8519f43f.chunk.js.map",
+    "index.html": "/storypointz/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/storypointz/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.5c5c6ac4.chunk.js.LICENSE.txt": "/storypointz/static/js/2.5c5c6ac4.chunk.js.LICENSE.txt",
+    "static/media/copy.ba2786b3.svg": "/storypointz/static/media/copy.ba2786b3.svg",
+    "static/media/plus.0693ab3c.svg": "/storypointz/static/media/plus.0693ab3c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70580c4e.js",
+    "static/js/2.5c5c6ac4.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.34fd0835.chunk.js"
+  ]
+}
