@@ -9,7 +9,7 @@ const Input = ({ selected, onSelect, ...props }) => {
 
   return (
     <Container onClick={handleSelect} selected={selected}>
-      <StyledInput {...props} />
+      <StyledInput selected={selected} {...props} />
     </Container>
   );
 };
@@ -20,9 +20,17 @@ const Container = styled.div`
 const StyledInput = styled.input`
   border-radius: 10px;
   padding: 4px 10px;
-  border-width: 1px;
-  border-color: black;
   outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-width: 1px;
+  border-color: ${({ selected }) => selected ? 'pink' : 'black'};
+  
+  &:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 `;
 
  export default Input;

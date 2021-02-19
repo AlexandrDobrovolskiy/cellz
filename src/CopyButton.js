@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import copy from './copy.svg';
 
-const PlusButton = ({ ...props }) => {
+const CopyButton = ({ ...props }) => {
   return (
     <Container {...props}>
       <img src={copy} alt="plus" />
@@ -20,4 +20,4 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
-export default PlusButton;
+export default CopyButton;

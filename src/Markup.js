@@ -37,6 +37,7 @@ const Markup = ({ markup, onChange }) => {
 
   return (
     <Container>
+      <div style={{ width: '100%', textAlign: 'left', fontSize: 20, marginBottom: 14 }}>Complexity Scorecard</div>
       <Row style={{ marginBottom: '10px' }}>
         <div style={{ width: '100%', textAlign: 'left' }}>
           Name

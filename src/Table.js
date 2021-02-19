@@ -15,15 +15,24 @@ const markupRows = (markup, rows) => {
   });
 };
 
-const Table = ({ markup }) => {
-  const [rows, setRows] = useState(markupRows(markup,[]));
+const Table = ({ markup, current, feature, onChange }) => {
+  console.log(feature);
+  const setRows = (cb) => {
+    if (typeof cb === 'function') {
+      onChange(current, { ...feature, rows: cb(feature.rows) });
+      return;
+    }
+
+    onChange(current, { ...feature, rows: cb });
+  };
 
   useEffect(() => {
-    setRows(markupRows(markup, rows));
+    setRows(markupRows(markup, feature.rows));
   }, [markup]);
 
+
   const handleAddRow = () => {
-    setRows(r => markupRows(markup, [...r, { name: '', markup: [] }]));
+    setRows(r => markupRows(markup, [...r, { name: `Category ${r.length + 1}`, markup: [] }]));
   }
 
   const handleNameChange = (index) => (event) => {
@@ -58,7 +67,7 @@ const Table = ({ markup }) => {
   };
 
   const handleCopy = () => {
-    const textRows = rows.reduce((acc, { name, markup }) => `
+    const textRows = feature.rows.reduce((acc, { name, markup }) => `
     ${acc}<tr><td>${name}</td>${markup.reduce((acc, m) => m.selected ? `${acc}<td style="background-color:lightgreen">${m.name}</td>` : `${acc}<td>${m.name}</td>`, '')}<td>${calcResult(markup)}<td>
     `, `<tr><td><b>Feature</b></td>${Array.from({ length: markup.length }, () => '<td></td>').join('')}<td><b>Result</b></td></tr>`);
     const textTable = `<table>${textRows}</table>`
@@ -77,21 +86,20 @@ const Table = ({ markup }) => {
     <Container>
       <Row>
         <div style={{ display: 'flex' }}>
-          <div>Feature</div>
+          <div>{feature.name}</div>
         </div>
-        <div>Result</div>
       </Row>
-      {rows.map(({ name, markup }, index) => (
-        <Row>
-          <div style={{ display: 'flex' }}>
-            <Input value={name} onChange={handleNameChange(index)}/>
-            {markup.map((m, i) => <Markup key={i} onClick={handleSelect(index, m.name)} selected={m.selected}>{m.name}</Markup>)}
-          </div>
-          <div>{calcResult(markup)}</div>
-        </Row>
-      ))}
-      <div className="btn"></div>
+      <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
+        {feature.rows.map(({ name, markup }, index) => (
+            <div style={{ display: 'flex', flexDirection: 'column', padding: 20 }}>
+              <Input value={name} onChange={handleNameChange(index)}/>
+              {markup.map((m, i) => <Markup key={i} onClick={handleSelect(index, m.name)} selected={m.selected}>{m.name}</Markup>)}
+              <div>{calcResult(feature.rows[index].markup)}</div>
+            </div>
+        ))}
       <PlusButton onClick={handleAddRow} />
+      </div>
+      <div><b>Total points: </b>{calcResult(feature.rows.reduce((acc, { markup }) => [...acc, ...markup], []))}</div>
       <CopyButton style={{ position: 'absolute', right: 10, bottom: 10}} onClick={handleCopy} />
     </Container>
   );
@@ -110,7 +118,7 @@ const Container = styled.div`
 
 const Row = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
   margin: 10px 0;
@@ -118,8 +126,10 @@ const Row = styled.div`
 
 const Markup = styled.div`
   cursor: pointer;
-  padding: 4px 16px;
-  margin: 0 4px;
+  padding: 4px 14px;
+  text-align: left;
+  width: 100%;
+  margin: 6px 4px;
   border-radius: 4px;
   ${({ selected }) => selected ? 'background-color: lightgreen;' : ''}
 `;
