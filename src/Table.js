@@ -49,10 +49,10 @@ const Table = ({ markup, current, feature, onChange }) => {
       if (i === index) {
         return { ...r, markup: r.markup.map((m) => {
             if (m.name === name) {
-              return { ...m, selected: !m.selected };
+              return { ...m, selected: true };
             }
 
-            return m;
+            return { ...m, selected: false };
           })
         };
       }
