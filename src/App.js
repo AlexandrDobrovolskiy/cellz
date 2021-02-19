@@ -24,9 +24,9 @@ function App() {
   }, [markup])
 
   useEffect(() => {
-    const f = localStorage.getItem('features') || [];
+    const f = localStorage.getItem('features') || '[]';
     setFeatures(JSON.parse(f));
-    const m = localStorage.getItem('markup') || [];
+    const m = localStorage.getItem('markup') || '[]';
     setMarkup(JSON.parse(m));
   }, []);
 
