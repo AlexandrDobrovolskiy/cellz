@@ -69,7 +69,7 @@ const Table = ({ markup, current, feature, onChange }) => {
     let textRows1 = `<tr><td>${feature.name}</td></tr>`;
     textRows1 += `<tr>${feature.rows.map(row => `<td>${row.name}</td>`).join('')}</tr>`
     for (let i = 0; i < feature.rows.length; i++) {
-      textRows1 += `<tr>${feature.rows.map(row => `<td>${row.markup[i].name}</td>`).join('')}</tr>`
+      textRows1 += `<tr>${feature.rows.map(row => `<td style="background-color: ${row.markup[i].selected ? 'lightgreen' : 'none'}">${row.markup[i].name}</td>`).join('')}</tr>`
     }
     textRows1 += `<tr>${feature.rows.map(row => `<td><b>Score:</b> ${calcResult(row.markup)}</td>`).join('')}</tr>`
     textRows1 += `<tr><td><b>Total feature score:</b> ${calcResult(feature.rows.reduce((acc, { markup }) => [...acc, ...markup], []))}</td></tr>`
