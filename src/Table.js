@@ -71,7 +71,7 @@ const Table = ({ markup, current, feature, onChange }) => {
     for (let i = 0; i < feature.rows.length; i++) {
       textRows1 += `<tr>${feature.rows.map(row => `<td>${row.markup[i].name}</td>`).join('')}</tr>`
     }
-    textRows1 += `<tr>${feature.rows.map(row => `<td>Category score: ${calcResult(row.markup)}</td>`).join('')}</tr>`
+    textRows1 += `<tr>${feature.rows.map(row => `<td><b>Score:</b> ${calcResult(row.markup)}</td>`).join('')}</tr>`
     textRows1 += `<tr><td><b>Total feature score:</b> ${calcResult(feature.rows.reduce((acc, { markup }) => [...acc, ...markup], []))}</td></tr>`
     const textTable1 = `<table>${textRows1}</table>`;
 
