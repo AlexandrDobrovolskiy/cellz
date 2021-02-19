@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/cellz/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/cellz/static/js/main.fcb652cf.chunk.js",
-    "main.js.map": "/cellz/static/js/main.fcb652cf.chunk.js.map",
+    "main.js": "/cellz/static/js/main.7049fcf2.chunk.js",
+    "main.js.map": "/cellz/static/js/main.7049fcf2.chunk.js.map",
     "runtime-main.js": "/cellz/static/js/runtime-main.e576cf40.js",
     "runtime-main.js.map": "/cellz/static/js/runtime-main.e576cf40.js.map",
-    "static/js/2.b0629a15.chunk.js": "/cellz/static/js/2.b0629a15.chunk.js",
-    "static/js/2.b0629a15.chunk.js.map": "/cellz/static/js/2.b0629a15.chunk.js.map",
+    "static/js/2.ac22110d.chunk.js": "/cellz/static/js/2.ac22110d.chunk.js",
+    "static/js/2.ac22110d.chunk.js.map": "/cellz/static/js/2.ac22110d.chunk.js.map",
     "static/js/3.8519f43f.chunk.js": "/cellz/static/js/3.8519f43f.chunk.js",
     "static/js/3.8519f43f.chunk.js.map": "/cellz/static/js/3.8519f43f.chunk.js.map",
     "index.html": "/cellz/index.html",
     "static/css/main.8c8b27cf.chunk.css.map": "/cellz/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.b0629a15.chunk.js.LICENSE.txt": "/cellz/static/js/2.b0629a15.chunk.js.LICENSE.txt",
+    "static/js/2.ac22110d.chunk.js.LICENSE.txt": "/cellz/static/js/2.ac22110d.chunk.js.LICENSE.txt",
     "static/media/copy.ba2786b3.svg": "/cellz/static/media/copy.ba2786b3.svg",
     "static/media/plus.0693ab3c.svg": "/cellz/static/media/plus.0693ab3c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e576cf40.js",
-    "static/js/2.b0629a15.chunk.js",
+    "static/js/2.ac22110d.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.fcb652cf.chunk.js"
+    "static/js/main.7049fcf2.chunk.js"
   ]
 }
