@@ -16,7 +16,6 @@ const markupRows = (markup, rows) => {
 };
 
 const Table = ({ markup, current, feature, onChange }) => {
-  console.log(feature);
   const setRows = (cb) => {
     if (typeof cb === 'function') {
       onChange(current, { ...feature, rows: cb(feature.rows) });
@@ -67,14 +66,18 @@ const Table = ({ markup, current, feature, onChange }) => {
   };
 
   const handleCopy = () => {
-    const textRows = feature.rows.reduce((acc, { name, markup }) => `
-    ${acc}<tr><td>${name}</td>${markup.reduce((acc, m) => m.selected ? `${acc}<td style="background-color:lightgreen">${m.name}</td>` : `${acc}<td>${m.name}</td>`, '')}<td>${calcResult(markup)}<td>
-    `, `<tr><td><b>Feature</b></td>${Array.from({ length: markup.length }, () => '<td></td>').join('')}<td><b>Result</b></td></tr>`);
-    const textTable = `<table>${textRows}</table>`
+    let textRows1 = `<tr><td>${feature.name}</td></tr>`;
+    textRows1 += `<tr>${feature.rows.map(row => `<td>${row.name}</td>`).join('')}</tr>`
+    for (let i = 0; i < feature.rows.length; i++) {
+      textRows1 += `<tr>${feature.rows.map(row => `<td>${row.markup[i].name}</td>`).join('')}</tr>`
+    }
+    textRows1 += `<tr>Category score: ${feature.rows.map(row => `<td>${calcResult(row.markup)}</td>`).join('')}</tr>`
+    textRows1 += `<tr><td><b>Total feature score:</b> ${calcResult(feature.rows.reduce((acc, { markup }) => [...acc, ...markup], []))}</td></tr>`
+    const textTable1 = `<table>${textRows1}</table>`;
 
     const item = new clipboard.ClipboardItem({
       "text/html": new Blob(
-        [textTable],
+        [textTable1],
         { type: "text/html" }
       ),
       "text/plain": "Paste it to google sheets or exel"

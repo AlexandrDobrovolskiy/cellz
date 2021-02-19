@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import './App.css';
@@ -10,6 +10,25 @@ function App() {
   const [markup, setMarkup] = useState([]);
   const [features, setFeatures] = useState([]);
   const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (features.length) {
+      localStorage.setItem('features', JSON.stringify(features));
+    }
+  }, [features])
+
+  useEffect(() => {
+    if (markup.length) {
+      localStorage.setItem('markup', JSON.stringify(markup));
+    }
+  }, [markup])
+
+  useEffect(() => {
+    const f = localStorage.getItem('features') || [];
+    setFeatures(JSON.parse(f));
+    const m = localStorage.getItem('markup') || [];
+    setMarkup(JSON.parse(m));
+  }, []);
 
   const handleChangeFeature = (index, feature) => {
     setFeatures(f => f.map((f, i) => {
