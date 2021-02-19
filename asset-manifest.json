@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/cellz/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/cellz/static/js/main.806d8301.chunk.js",
-    "main.js.map": "/cellz/static/js/main.806d8301.chunk.js.map",
+    "main.js": "/cellz/static/js/main.e3d80924.chunk.js",
+    "main.js.map": "/cellz/static/js/main.e3d80924.chunk.js.map",
     "runtime-main.js": "/cellz/static/js/runtime-main.e576cf40.js",
     "runtime-main.js.map": "/cellz/static/js/runtime-main.e576cf40.js.map",
     "static/js/2.ac22110d.chunk.js": "/cellz/static/js/2.ac22110d.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.e576cf40.js",
     "static/js/2.ac22110d.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.806d8301.chunk.js"
+    "static/js/main.e3d80924.chunk.js"
   ]
 }
